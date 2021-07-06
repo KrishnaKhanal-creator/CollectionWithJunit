@@ -6,9 +6,6 @@ public class Person {
     private String name;
     private Float salary;
 
-    public Person(Integer id) {
-        this.id = id;
-    }
 
     public Person(Integer id, String name, Float salary) {
         this.id = id;

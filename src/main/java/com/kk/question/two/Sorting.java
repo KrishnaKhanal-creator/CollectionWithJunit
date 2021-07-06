@@ -5,22 +5,25 @@ import java.util.List;
 
 public class Sorting {
 
-    public static void sortByAge(List<Employee> employees){
+    public static boolean sortByAge(List<Employee> employees){
         Collections.sort(employees,new AgeComparator());
         for (Employee emp:employees) {
             System.out.println(emp);
         }
+        return true;
     }
-    public static void sortByFirstname(List<Employee> employees){
+    public static boolean sortByFirstname(List<Employee> employees){
         Collections.sort(employees,new FirstnameComparator());
         for (Employee emp:employees) {
             System.out.println(emp);
         }
+        return true;
     }
-    public static void sortByLastname(List<Employee> employees){
+    public static boolean sortByLastname(List<Employee> employees){
         Collections.sort(employees,new LastnameComparator());
         for (Employee emp:employees) {
             System.out.println(emp);
         }
+        return true;
     }
 }

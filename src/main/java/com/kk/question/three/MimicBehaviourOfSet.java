@@ -48,13 +48,3 @@ public class MimicBehaviourOfSet {
         }
     }
 }
-
-
-
-
-
-
-
-//adds only if the object is already not present(for simple object types).
-// On successful addition returns the index no of the location where the new object was added.
-// If duplicate element, -1 should be returned.

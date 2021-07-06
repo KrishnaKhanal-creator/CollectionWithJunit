@@ -11,6 +11,7 @@ public class PersonService {
         listOfPerson.add(new Person(1, "prem", 50000f));
         return listOfPerson;
     }
+
     Map<Float,Person> transformList(List<Person> people){
         Map<Float,Person> map = new HashMap<>();
         String s = "1.";
@@ -27,13 +28,16 @@ public class PersonService {
         return map;
     }
 
-    void show(List<Person> people){
+    //made boolean return type for unit testing
+    boolean show(List<Person> people){
         for (Person person: people){
             System.out.println(person);
         }
+        return true;
     }
 
-    void show(Map<Float,Person> people){
+    //made boolean return type for unit testing
+    boolean show(Map<Float,Person> people){
         System.out.println("key\t\t\tpersonValue\n");
         Set<Map.Entry<Float, Person>> entrySet = people.entrySet();
         Iterator<Map.Entry<Float, Person>> iterator = entrySet.iterator();
@@ -41,5 +45,6 @@ public class PersonService {
             Map.Entry<Float, Person> nextEntry = iterator.next();
             System.out.println(nextEntry.getKey() + ", " + nextEntry.getValue());
         }
+        return true;
     }
 }

@@ -36,6 +36,7 @@ public class Client {
         Client client = new Client();
         while (true){
             insertService.insertIntoList(client.askElement());
+
             input.nextLine();
             System.out.println("-------------------------------------------------------------------------------------------------------------------------");
 

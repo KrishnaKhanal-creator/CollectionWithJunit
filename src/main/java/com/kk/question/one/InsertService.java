@@ -19,7 +19,7 @@ public class InsertService {
         return new String(chars);
     }
 
-    public void insertIntoList(String inputElement){
+    public int insertIntoList(String inputElement){
         boolean inputBoolean;
         if(inputElement.equalsIgnoreCase("true")){
             inputBoolean = false;
@@ -46,7 +46,7 @@ public class InsertService {
             listEntity.getObjectsList().add(askDesireLocation(),inputInt);
         }else System.out.println("Something went wrong Please Try again!!");
         System.out.println("The NEW updated list looks like this: \n\n\t\t\t\t\t\t\t\t\t\t\t" + listEntity.getObjectsList() + "\n");
-
+        return 1;
     }
 
 
