@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SortingTest {
     List<Employee> employees;
+    Company company;
 
     @BeforeEach
     void init(){
@@ -19,12 +20,18 @@ class SortingTest {
         employees.add(new Employee(1,"Zuber","Dahal", 23));
         employees.add(new Employee(1,"Sham","Madi", 25));
         employees.add(new Employee(1,"Sham","Dahal", 25));
+        company = new Company();
     }
 
     @Test
     void testSortByAge() {
 
         assertTrue(Sorting.sortByAge(employees));
+    }
+
+    @Test
+    void getEmployees() {
+        assertEquals(24,company.getEmployees().get(0).getAge());
     }
 
     @Test
